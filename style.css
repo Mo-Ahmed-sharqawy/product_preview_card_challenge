@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 600px;
+    height: 460px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+main .content {
+    background-color: white;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .img {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.05), 
+        rgba(0, 0, 0, 0.05)
+      ), url(images/image-product-desktop.jpg);
+    background-size: cover;
+}
+
+main .content .type {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+main .content h1 {
+    font-family: 'Fraunces';
+    font-size: 3.1rem;
+    color: hsl(212, 21%, 14%);
+}
+
+main .content .text {
+    color: hsl(228, 12%, 48%);
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2.1rem;
+    width: 210px;
+}
+
+main .content .price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+main .content .price .actual {
+    font-family: 'Fraunces';
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: hsl(158, 36%, 37%);
+}
+
+main .content .price .delete {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+main ul {
+    list-style-position: inside;
+    list-style-image: url(images/icon-cart.svg);
+    background-color: hsl(158, 36%, 37%);
+    
+    padding: 15px 0px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main ul li a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+} 
+
+main ul:hover {
+    background-color: hsl(156.32deg 42.22% 17.65%);
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 300px;
+        height: fit-content;
+        grid-template-columns: 1fr;
+        grid-template-rows: 210px 1fr;
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    main .content {
+        padding: 25px;
+        height: fit-content;
+    }
+
+    main .img {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.05), 
+            rgba(0, 0, 0, 0.05)
+          ), url(images/image-product-mobile.jpg);
+        background-size: cover;
+    }
+}
+
+
+
